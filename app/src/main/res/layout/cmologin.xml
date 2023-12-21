@@ -5,10 +5,10 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textcmo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CMRL L1's Login"
+        android:text="CMRL CMO's Login"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:background="@color/blue"
@@ -78,9 +78,6 @@
 
         android:textSize="25dp"/>
 
-
-
-
     <EditText
         android:id="@+id/eidl"
         android:layout_width="300dp"
@@ -95,8 +92,8 @@
 
     <TextView
         android:id="@+id/alerttext"
-        android:layout_width="336dp"
-        android:layout_height="174dp"
+        android:layout_width="337dp"
+        android:layout_height="142dp"
         android:layout_marginVertical="500dp"
         android:layout_marginStart="45dp"
         android:text=""

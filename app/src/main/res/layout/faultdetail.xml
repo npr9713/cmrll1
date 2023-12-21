@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <!-- Display Fault Details -->
+    xmlns:tools="http://schemas.android.com/tools">
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Request Detail:"
+        android:text="Request Details:"
         android:textSize="30dp"
         android:layout_marginStart="20dp"
         android:textStyle="bold"
@@ -137,17 +131,6 @@
         android:layout_toRightOf="@+id/faultstatus"
         android:text=""
         android:textSize="20dp" />
-
-    <Button
-        android:id="@+id/acceptb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="370dp"
-        android:layout_centerHorizontal="true"
-        android:text="Accept" />
-
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -159,34 +142,40 @@
 
         <ImageButton
             android:id="@+id/logsbut"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_above="@id/bottom_navigation"
-            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/logslogo1"
-            android:layout_marginStart="50dp"
-            android:background="?android:attr/selectableItemBackground" />
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <ImageButton
             android:id="@+id/homebut"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_above="@id/bottom_navigation"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="85dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/homelogo1"
-            android:background="?android:attr/selectableItemBackground" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/profilebut"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_above="@id/bottom_navigation"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="75dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/profilelogo1"
-            android:background="?android:attr/selectableItemBackground" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/acceptb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="370dp"
+        android:layout_centerHorizontal="true"
+        android:text="Accept"/>
 
 </RelativeLayout>

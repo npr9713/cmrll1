@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">cmrl project</string>
+    <string name="app_name">cmrl project
+    </string>
+    <string-array name="station_codes">
+        <item>SWD</item>
+        <item>SWN</item>
+        <item>STV</item>
+        <item>STT</item>
+        <!-- Add more station codes as needed -->
+    </string-array>
 </resources>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView10"
@@ -43,32 +44,30 @@
 
         <ImageButton
             android:id="@+id/logsbut"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_above="@id/bottom_navigation"
-            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/logslogo1"
-            android:layout_marginStart="50dp"
-            android:background="?android:attr/selectableItemBackground" />
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <ImageButton
             android:id="@+id/homebut"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_above="@id/bottom_navigation"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="85dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/homelogo1"
-            android:background="?android:attr/selectableItemBackground" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/profilebut"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_above="@id/bottom_navigation"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="75dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/profilelogo1"
-            android:background="?android:attr/selectableItemBackground" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
+
 </RelativeLayout>

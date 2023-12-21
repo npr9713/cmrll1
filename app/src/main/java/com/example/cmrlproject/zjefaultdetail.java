@@ -4,47 +4,47 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Spinner;
+
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-public class faultdetail extends AppCompatActivity{
+public class zjefaultdetail extends AppCompatActivity{
     ImageButton b1,b2,b3;
-    Button acc;
+
     TextView t1,t2,t3,t4,t5,t6;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.faultdetail);
+        setContentView(R.layout.zjefaultdetail);
         b1=(ImageButton)findViewById(R.id.homebut);
-        b2=(ImageButton)findViewById(R.id.profilebut);
-        b3=(ImageButton)findViewById(R.id.logsbut);
+        b2=(ImageButton)findViewById(R.id.approvereq);
+        b3=(ImageButton)findViewById(R.id.viewreqbut);
         t1=(TextView)findViewById(R.id.acceptedackno);
         t2=(TextView)findViewById(R.id.accepteddateandtime);
         t3=(TextView)findViewById(R.id.acceptedstation);
         t4=(TextView)findViewById(R.id.accepteddevice);
         t5=(TextView)findViewById(R.id.accepteddeviceno);
         t6=(TextView)findViewById(R.id.acceptedstatus);
-        acc=(Button)findViewById(R.id.acceptb);
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(faultdetail.this, l1home.class);
+                Intent i = new Intent(zjefaultdetail.this, zjehome.class);
                 startActivity(i);
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(faultdetail.this, l1profile.class);
+                Intent i = new Intent(zjefaultdetail.this, zjeviewreq.class);
                 startActivity(i);
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(faultdetail.this, l1acceptedreq.class);
+                Intent i = new Intent(zjefaultdetail.this, cmoviewreq.class);
                 startActivity(i);
             }
         });
@@ -66,17 +66,6 @@ public class faultdetail extends AppCompatActivity{
             t6.setText(status);
 
         }
-        acc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(faultdetail.this, l1acceptedreq.class);
-
-                startActivity(i);
-
-
-            }
-        });
-
 
 
     }

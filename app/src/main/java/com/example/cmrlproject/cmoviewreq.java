@@ -28,7 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class l1home extends AppCompatActivity {
+public class cmoviewreq extends AppCompatActivity {
     private JSONArray successArray;
 
     String eid;
@@ -36,11 +36,11 @@ public class l1home extends AppCompatActivity {
     private ListView faultListView;
     private List<String> faultList;
     private ArrayAdapter<String> adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.l1home);
+        setContentView(R.layout.cmoviewreq);
+
 
         // Initialize views and variables
         faultListView = findViewById(R.id.faultListView);
@@ -49,33 +49,26 @@ public class l1home extends AppCompatActivity {
         faultListView.setAdapter(adapter);
 
         // Execute the AsyncTask to make the HTTP POST request
-        new HttpRequestTask().execute("https://809c-2401-4900-629e-2400-dd99-5947-2d6c-89cd.ngrok-free.app/view");
+        new HttpRequestTask().execute("https://515e-2401-4900-4df5-8722-4da8-94b1-8a1b-a29e.ngrok-free.app/view");
 
-        // Other initialization code
-        Intent i = getIntent();
-        eid = i.getStringExtra("employeeid_key");
-        b1 = findViewById(R.id.logsbut);
+        b1 = findViewById(R.id.addempbut);
         b2 = findViewById(R.id.homebut);
-        b3 = findViewById(R.id.profilebut);
+        b3 = findViewById(R.id.viewreqbut);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(l1home.this, l1acceptedreq.class);
+                Intent i = new Intent(cmoviewreq.this, cmoaddemp.class);
                 startActivity(i);
             }
         });
-
-        b3.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(l1home.this, l1profile.class);
-                i.putExtra("employeeid_key", eid);
+                Intent i = new Intent(cmoviewreq.this, cmohome.class);
                 startActivity(i);
             }
         });
-
-        // Handle item click to open details page
         faultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -89,11 +82,10 @@ public class l1home extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     private void openFaultDetails(JSONObject successObject) throws JSONException {
-        Intent intent = new Intent(this, faultdetail.class);
+        Intent intent = new Intent(this, cmofaultdetail.class);
         String ackno = successObject.getString("ackno");
         Log.d("ACKNO",ackno);
         String date = successObject.getString("dt");
@@ -190,7 +182,7 @@ public class l1home extends AppCompatActivity {
                 }
             } else {
                 // Handle the case where the result is null
-                Toast.makeText(l1home.this, "Error fetching data from server", Toast.LENGTH_SHORT).show();
+                Toast.makeText(cmoviewreq.this, "Error fetching data from server", Toast.LENGTH_SHORT).show();
             }
         }
     }

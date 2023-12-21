@@ -13,8 +13,8 @@ import android.content.Intent;
 
 import android.os.Bundle;
 
-public class l1login extends AppCompatActivity {
-    Button b1,b2,b3;
+public class cmologin extends AppCompatActivity {
+    Button b1,b2;
     TextView t1;
     EditText e1,e2,e3;
     String eid;
@@ -22,17 +22,14 @@ public class l1login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.l1login);
+        setContentView(R.layout.cmologin);
         Intent i = getIntent();
-        t1=(TextView)findViewById(R.id.alerttext);
-        e1=(EditText) findViewById(R.id.eidl);
-        e2=(EditText) findViewById(R.id.phonenol);
-        e3=(EditText) findViewById(R.id.passwordl);
-        b1=(Button) findViewById(R.id.loginb);
-        b2=(Button) findViewById(R.id.resetpass);
-
-
-
+        t1 = (TextView) findViewById(R.id.alerttext);
+        e1 = (EditText) findViewById(R.id.eidl);
+        e2 = (EditText) findViewById(R.id.phonenol);
+        e3 = (EditText) findViewById(R.id.passwordl);
+        b1 = (Button) findViewById(R.id.loginb);
+        b2 = (Button) findViewById(R.id.resetpass);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,12 +41,10 @@ public class l1login extends AppCompatActivity {
                 }
                 else{
                     eid=e1.getText().toString();
-                    Intent i = new Intent(l1login.this, l1home.class);
+                    Intent i = new Intent(cmologin.this, cmohome.class);
                     i.putExtra("employeeid_key",eid);
                     startActivity(i);
                 }
             }
         });
-
-    }
-}
+    }}

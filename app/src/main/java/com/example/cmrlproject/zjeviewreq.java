@@ -27,8 +27,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-public class l1home extends AppCompatActivity {
+public class zjeviewreq extends AppCompatActivity{
     private JSONArray successArray;
 
     String eid;
@@ -40,9 +39,8 @@ public class l1home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.l1home);
+        setContentView(R.layout.zjeviewreq);
 
-        // Initialize views and variables
         faultListView = findViewById(R.id.faultListView);
         faultList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, faultList);
@@ -51,26 +49,22 @@ public class l1home extends AppCompatActivity {
         // Execute the AsyncTask to make the HTTP POST request
         new HttpRequestTask().execute("https://809c-2401-4900-629e-2400-dd99-5947-2d6c-89cd.ngrok-free.app/view");
 
-        // Other initialization code
-        Intent i = getIntent();
-        eid = i.getStringExtra("employeeid_key");
-        b1 = findViewById(R.id.logsbut);
+        b1 = findViewById(R.id.approvereq);
         b2 = findViewById(R.id.homebut);
-        b3 = findViewById(R.id.profilebut);
-
+        b3 = findViewById(R.id.viewreqbut);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(l1home.this, l1acceptedreq.class);
+                Intent i = new Intent(zjeviewreq.this, zjeapprovereq.class);
                 startActivity(i);
             }
         });
 
-        b3.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(l1home.this, l1profile.class);
-                i.putExtra("employeeid_key", eid);
+                Intent i = new Intent(zjeviewreq.this, zjehome.class);
+
                 startActivity(i);
             }
         });
@@ -91,9 +85,8 @@ public class l1home extends AppCompatActivity {
         });
 
     }
-
     private void openFaultDetails(JSONObject successObject) throws JSONException {
-        Intent intent = new Intent(this, faultdetail.class);
+        Intent intent = new Intent(this, zjefaultdetail.class);
         String ackno = successObject.getString("ackno");
         Log.d("ACKNO",ackno);
         String date = successObject.getString("dt");
@@ -190,7 +183,7 @@ public class l1home extends AppCompatActivity {
                 }
             } else {
                 // Handle the case where the result is null
-                Toast.makeText(l1home.this, "Error fetching data from server", Toast.LENGTH_SHORT).show();
+                Toast.makeText(zjeviewreq.this, "Error fetching data from server", Toast.LENGTH_SHORT).show();
             }
         }
     }

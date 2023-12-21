@@ -53,6 +53,50 @@
             android:name=".acceptedreqdetail"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".cmologin"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".zjelogin"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".cmohome"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".zjesignup"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".cmoaddemp"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".zjehome"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".cmoviewreq"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".cmofaultdetail"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".zjeviewreq"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".zjefaultdetail"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".zjeapprovereq"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

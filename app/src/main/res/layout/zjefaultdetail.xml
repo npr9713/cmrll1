@@ -7,7 +7,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Accepted Request Details:"
+        android:text="Request Details:"
         android:textSize="30dp"
         android:layout_marginStart="20dp"
         android:textStyle="bold"
@@ -141,12 +141,13 @@
         android:elevation="8dp">
 
         <ImageButton
-            android:id="@+id/logsbut"
+            android:id="@+id/approvereq"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/logslogo1"
+            android:src="@drawable/approvereqlogo"
+            android:scaleType="fitCenter"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -159,32 +160,14 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/profilebut"
+            android:id="@+id/viewreqbut"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/profilelogo1"
+            android:src="@drawable/viewreqlogo"
             tools:ignore="SpeakableTextPresentCheck" />
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/closeb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="370dp"
-        android:layout_centerHorizontal="true"
-        android:text="Close"/>
-    <Button
-        android:id="@+id/sparereqb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="420dp"
-        android:layout_centerHorizontal="true"
-        android:text="Spare Request"/>
+    </LinearLayout>
 
 </RelativeLayout>
