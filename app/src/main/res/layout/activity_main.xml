@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="411dp"
@@ -28,12 +29,13 @@
         android:layout_marginBottom="36dp"
         android:text="CMRL SpareMan"
         android:textColor="@color/blue"
-        android:textSize="35dp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintOverlap" />
 
     <Button
         android:id="@+id/button3"
@@ -44,11 +46,11 @@
         android:layout_marginBottom="44dp"
         android:backgroundTint="@color/blue"
         android:text="Get Started->"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="TextSizeCheck,VisualLintOverlap" />
 
     <TextView
         android:id="@+id/textView14"
@@ -60,25 +62,27 @@
         android:gravity="center_horizontal"
         android:text="Type of User:"
         android:textColor="@color/blue"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintOverlap" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="207dp"
         android:layout_height="209dp"
-
         android:layout_marginStart="74dp"
         android:layout_marginEnd="223dp"
         android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/blue"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck">
 
         <RadioButton
             android:id="@+id/checkbox01"
@@ -90,7 +94,7 @@
             android:minHeight="48dp"
             android:text="CMO"
             android:textColor="@color/blue"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <RadioButton
@@ -103,7 +107,7 @@
             android:minHeight="48dp"
             android:text="Zone JE"
             android:textColor="@color/blue"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <RadioButton
@@ -112,15 +116,23 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginBottom="24dp"
-            android:layout_toRightOf="@+id/checkbox01"
             android:buttonTint="@color/blue"
             android:minHeight="48dp"
             android:text="L1"
             android:textColor="@color/blue"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border">
+
+        <!-- Your other UI elements here -->
+
+    </RelativeLayout>
+
 
 
 

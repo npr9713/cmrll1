@@ -47,7 +47,7 @@ public class zjeviewreq extends AppCompatActivity{
         faultListView.setAdapter(adapter);
 
         // Execute the AsyncTask to make the HTTP POST request
-        new HttpRequestTask().execute("https://809c-2401-4900-629e-2400-dd99-5947-2d6c-89cd.ngrok-free.app/view");
+        new HttpRequestTask().execute("https://5bc5-2401-4900-6282-8cdb-997f-35af-1544-3494.ngrok-free.app/view");
 
         b1 = findViewById(R.id.approvereq);
         b2 = findViewById(R.id.homebut);

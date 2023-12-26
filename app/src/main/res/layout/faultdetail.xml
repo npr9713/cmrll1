@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     xmlns:tools="http://schemas.android.com/tools">
     <TextView
         android:id="@+id/textView4"
@@ -19,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fault Ack Number: "
+        android:textColor="@color/black"
         android:layout_marginTop="70dp"
         android:textSize="20dp"
         android:layout_marginStart="20dp"
@@ -31,6 +33,7 @@
         android:layout_marginTop="120dp"
         android:layout_marginStart="20dp"
         android:textSize="20dp"
+        android:textColor="@color/black"
         android:text="Date and Time: "
         android:textStyle="bold"/>
     <TextView
@@ -40,6 +43,7 @@
         android:layout_marginStart="20dp"
         android:textSize="20dp"
         android:text="Station:"
+        android:textColor="@color/black"
         android:layout_marginTop="170dp"
         android:textStyle="bold"/>
     <TextView
@@ -47,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Device: "
+        android:textColor="@color/black"
         android:layout_marginStart="20dp"
         android:textSize="20dp"
         android:layout_marginTop="220dp"
@@ -57,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
         android:textSize="20dp"
+        android:textColor="@color/black"
         android:layout_marginStart="20dp"
         android:text="Device Number: "
         android:textStyle="bold"/>
@@ -66,6 +72,7 @@
         android:layout_marginTop="320dp"
         android:layout_marginStart="20dp"
         android:textSize="20dp"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:text="Fault Status: "
         android:textStyle="bold"/>
@@ -177,5 +184,6 @@
         android:layout_marginTop="370dp"
         android:layout_centerHorizontal="true"
         android:text="Accept"/>
+
 
 </RelativeLayout>

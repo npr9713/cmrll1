@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     xmlns:tools="http://schemas.android.com/tools">
     <TextView
         android:id="@+id/reqtext"
@@ -68,6 +69,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:textSize="20dp"
+        android:textColorHint="@color/black"
         android:layout_marginTop="150dp"
         android:layout_marginStart="30dp"
         android:inputType="text"
@@ -78,6 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
+        android:textColor="@color/black"
         android:layout_marginTop="100dp"
         android:layout_marginStart="30dp"
         android:text="Station:" />
@@ -88,6 +91,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
+        android:textColorHint="@color/black"
         android:layout_marginTop="220dp"
         android:layout_marginStart="30dp"
         android:hint="Device No" />
@@ -101,6 +105,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="290dp"
         android:hint="Fault Description"
+        android:textColorHint="@color/black"
         />
 
     <EditText
@@ -111,6 +116,7 @@
         android:inputType="text"
         android:layout_marginStart="30dp"
         android:layout_marginTop="360dp"
+        android:textColorHint="@color/black"
         android:hint="Fault Ack No" />
 
     <Button

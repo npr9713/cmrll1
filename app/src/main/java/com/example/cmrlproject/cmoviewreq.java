@@ -49,7 +49,7 @@ public class cmoviewreq extends AppCompatActivity {
         faultListView.setAdapter(adapter);
 
         // Execute the AsyncTask to make the HTTP POST request
-        new HttpRequestTask().execute("https://515e-2401-4900-4df5-8722-4da8-94b1-8a1b-a29e.ngrok-free.app/view");
+        new HttpRequestTask().execute("https://5bc5-2401-4900-6282-8cdb-997f-35af-1544-3494.ngrok-free.app/view");
 
         b1 = findViewById(R.id.addempbut);
         b2 = findViewById(R.id.homebut);
