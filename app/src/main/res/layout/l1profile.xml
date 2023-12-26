@@ -69,6 +69,7 @@
         android:layout_marginTop="380dp"
         android:layout_marginStart="20dp"
         android:text="Employee Name:"
+        android:textColor="@color/black"
         android:textStyle="bold"/>
 
     <TextView
@@ -92,6 +93,7 @@
         android:textSize="20dp"
         android:layout_marginTop="445dp"
         android:text="Employee ID:"
+        android:textColor="@color/black"
         android:textStyle="bold"/>
 
     <TextView
@@ -114,6 +116,7 @@
         android:textSize="20dp"
         android:text="Email ID:"
         android:layout_marginTop="515dp"
+        android:textColor="@color/black"
         android:layout_marginStart="20dp"
         android:textStyle="bold"/>
 
@@ -125,6 +128,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
+        android:textColor="@color/black"
         android:layout_marginTop="585dp"/>
 
     <TextView
