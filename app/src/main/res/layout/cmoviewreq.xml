@@ -40,6 +40,23 @@
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/viewreqlogo"
             tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/dashboardbut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/piechartlogo"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/profilebut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/profilelogo1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
 
     </LinearLayout>
 
@@ -69,8 +86,50 @@
             android:layout_height="match_parent"
             android:divider="@android:color/darker_gray"
             android:dividerHeight="1dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="160dp"
             />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter By Station:"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/black"
+        />
+    <Spinner
+        android:id="@+id/stationSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@+id/textView17"
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter By Status:"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"/>
+    <Spinner
+        android:id="@+id/statusSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@+id/textView18"
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="120dp"/>
+
 
 </RelativeLayout>

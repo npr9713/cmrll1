@@ -50,6 +50,14 @@
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/viewreqlogo"
             tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/profilebut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/profilelogo1"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
 

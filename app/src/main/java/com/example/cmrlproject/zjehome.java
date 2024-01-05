@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class zjehome extends AppCompatActivity {
     EditText e1,e2,e3,e4;
     Button b1;
-    ImageButton i1,i2,i3;
+    ImageButton i1,i2,i3,i4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,7 @@ public class zjehome extends AppCompatActivity {
         i1=(ImageButton)findViewById(R.id.approvereq);
         i2=(ImageButton)findViewById(R.id.homebut);
         i3=(ImageButton)findViewById(R.id.viewreqbut);
+        i4=(ImageButton)findViewById(R.id.profilebut);
 
 
         i1.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +39,13 @@ public class zjehome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(zjehome.this, zjeviewreq.class);
+                startActivity(i);
+            }
+        });
+        i4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(zjehome.this, zjeprofile.class);
                 startActivity(i);
             }
         });

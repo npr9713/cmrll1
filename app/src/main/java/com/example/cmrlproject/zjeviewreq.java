@@ -31,7 +31,7 @@ public class zjeviewreq extends AppCompatActivity{
     private JSONArray successArray;
 
     String eid;
-    ImageButton b1, b2, b3;
+    ImageButton b1, b2, b3,b4;
     private ListView faultListView;
     private List<String> faultList;
     private ArrayAdapter<String> adapter;
@@ -47,11 +47,12 @@ public class zjeviewreq extends AppCompatActivity{
         faultListView.setAdapter(adapter);
 
         // Execute the AsyncTask to make the HTTP POST request
-        new HttpRequestTask().execute("https://5bc5-2401-4900-6282-8cdb-997f-35af-1544-3494.ngrok-free.app/view");
+        new HttpRequestTask().execute("https://ac94-2401-4900-6299-a16-79ee-b71b-9e80-c8e7.ngrok-free.app/cmo_view");
 
         b1 = findViewById(R.id.approvereq);
         b2 = findViewById(R.id.homebut);
         b3 = findViewById(R.id.viewreqbut);
+        b4=  findViewById(R.id.profilebut);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,6 +66,13 @@ public class zjeviewreq extends AppCompatActivity{
             public void onClick(View view) {
                 Intent i = new Intent(zjeviewreq.this, zjehome.class);
 
+                startActivity(i);
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(zjeviewreq.this, zjeprofile.class);
                 startActivity(i);
             }
         });

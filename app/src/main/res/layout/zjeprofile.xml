@@ -1,143 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@drawable/background_gradient">
+
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Request Details:"
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
         android:textSize="30dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text=" MY PROFILE "
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="324dp"
+        android:layout_marginTop="43dp"
+        app:srcCompat="@drawable/profilemainlogo" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="380dp"
         android:layout_marginStart="20dp"
+        android:text="Employee Name:"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/enamep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="380dp"
+        android:layout_toRightOf="@+id/textView9"
+        android:ems="10"
+        android:textSize="20dp"
+        android:inputType="text"
+        android:text=""
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"
+        android:layout_marginTop="445dp"
+        android:text="Employee ID:"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/eidp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="445dp"
+        android:layout_toRightOf="@+id/textView11"
+        android:ems="10"
+        android:textSize="20dp"
+        android:inputType="text"
+        android:text=""
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Email ID:"
+        android:layout_marginTop="515dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone No:"
+        android:textSize="20dp"
         android:textStyle="bold"
+        android:layout_marginStart="20dp"
         android:textColor="@color/black"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="585dp"/>
 
     <TextView
-        android:id="@+id/faultnumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fault Ack Number: "
-        android:textColor="@color/black"
-        android:layout_marginTop="70dp"
-        android:textSize="20dp"
-        android:layout_marginStart="20dp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/faultdateandtime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginStart="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:text="Date and Time: "
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/faultstation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:textSize="20dp"
-        android:text="Station:"
-        android:textColor="@color/black"
-        android:layout_marginTop="170dp"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/faultdevice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Device: "
-        android:layout_marginStart="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="220dp"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/faultdeviceNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:textSize="20dp"
-        android:layout_marginStart="20dp"
-        android:text="Device Number: "
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/faultstatus"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="320dp"
-        android:layout_marginStart="20dp"
-        android:textSize="20dp"
-        android:layout_height="wrap_content"
-        android:text="Fault Status: "
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/acceptedackno"
-        android:layout_width="188dp"
+        android:id="@+id/eemailp"
+        android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="70dp"
-        android:layout_toRightOf="@+id/faultnumber"
+        android:layout_marginTop="515dp"
+        android:layout_toRightOf="@+id/textView12"
+        android:ems="10"
+        android:textSize="20dp"
+        android:inputType="text"
         android:text=""
-        android:textSize="20dp" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/accepteddateandtime"
-        android:layout_width="233dp"
+        android:id="@+id/ephonep"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="120dp"
-        android:layout_toRightOf="@+id/faultdateandtime"
+        android:layout_marginTop="585dp"
+        android:layout_toRightOf="@+id/textView13"
+        android:ems="10"
+        android:inputType="text"
         android:text=""
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/acceptedstation"
-        android:layout_width="304dp"
+    <Button
+        android:id="@+id/logoutb"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="170dp"
-        android:layout_toRightOf="@+id/faultstation"
-        android:text=""
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/accepteddevice"
-        android:layout_width="298dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="220dp"
-        android:layout_toRightOf="@+id/faultdevice"
-        android:text=""
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/accepteddeviceno"
-        android:layout_width="223dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="270dp"
-        android:layout_toRightOf="@+id/faultdeviceNumber"
-        android:text=""
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/acceptedstatus"
-        android:layout_width="255dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="320dp"
-        android:layout_toRightOf="@+id/faultstatus"
-        android:text=""
-        android:textSize="20dp" />
+        android:text="LogOut"
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="630dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -184,5 +174,4 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
-
 </RelativeLayout>

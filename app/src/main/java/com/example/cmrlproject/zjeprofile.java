@@ -9,49 +9,52 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class l1profile extends AppCompatActivity {
+public class zjeprofile extends AppCompatActivity {
     Button b1;
-    String eid;
-    ImageButton b2,b3;
-    TextView t1,t2,t3,t4;
+    ImageButton b2, b3, b4;
+    TextView t1, t2, t3, t4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.l1profile);
-        Intent i = getIntent();
-        eid=i.getStringExtra("employeeid_key");
+        setContentView(R.layout.zjeprofile);
         t1=(TextView) findViewById(R.id.enamep);
         t2=(TextView) findViewById(R.id.eidp);
         t3=(TextView) findViewById(R.id.eemailp);
         t4=(TextView) findViewById(R.id.ephonep);
         b1=(Button) findViewById(R.id.logoutb);
-        b2=(ImageButton)  findViewById(R.id.logsbut);
-        b3=(ImageButton) findViewById(R.id.homebut);
-        t2.setText(eid);
-
+        b2=(ImageButton)  findViewById(R.id.approvereq);
+        b3=(ImageButton)  findViewById(R.id.homebut);
+        b4=(ImageButton)  findViewById(R.id.viewreqbut);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(l1profile.this, MainActivity.class);
+                Intent i = new Intent(zjeprofile.this, MainActivity.class);
                 startActivity(i);
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(l1profile.this, l1acceptedreq.class);
+                Intent i = new Intent(zjeprofile.this, zjeapprovereq.class);
                 startActivity(i);
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(l1profile.this, l1home.class);
+                Intent i = new Intent(zjeprofile.this, zjehome.class);
                 startActivity(i);
             }
         });
-
-
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(zjeprofile.this, zjeviewreq.class);
+                startActivity(i);
+            }
+        });
     }
+
 }

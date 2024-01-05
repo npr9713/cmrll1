@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 public class zjefaultdetail extends AppCompatActivity{
-    ImageButton b1,b2,b3;
+    ImageButton b1,b2,b3,b4;
 
     TextView t1,t2,t3,t4,t5,t6;
     @Override
@@ -19,6 +19,7 @@ public class zjefaultdetail extends AppCompatActivity{
         b1=(ImageButton)findViewById(R.id.homebut);
         b2=(ImageButton)findViewById(R.id.approvereq);
         b3=(ImageButton)findViewById(R.id.viewreqbut);
+        b4=(ImageButton)findViewById(R.id.profilebut);
         t1=(TextView)findViewById(R.id.acceptedackno);
         t2=(TextView)findViewById(R.id.accepteddateandtime);
         t3=(TextView)findViewById(R.id.acceptedstation);
@@ -45,6 +46,13 @@ public class zjefaultdetail extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(zjefaultdetail.this, cmoviewreq.class);
+                startActivity(i);
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(zjefaultdetail.this, zjeprofile.class);
                 startActivity(i);
             }
         });

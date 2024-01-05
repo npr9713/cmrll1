@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,9 +31,9 @@ import java.util.Map;
 
 public class cmoviewreq extends AppCompatActivity {
     private JSONArray successArray;
-
-    String eid;
-    ImageButton b1, b2, b3;
+    private JSONObject successObject;
+    String selected_station,selected_status,not_selected_station,not_selected_status;
+    ImageButton b1, b2, b3,b4,b5;
     private ListView faultListView;
     private List<String> faultList;
     private ArrayAdapter<String> adapter;
@@ -49,11 +50,13 @@ public class cmoviewreq extends AppCompatActivity {
         faultListView.setAdapter(adapter);
 
         // Execute the AsyncTask to make the HTTP POST request
-        new HttpRequestTask().execute("https://5bc5-2401-4900-6282-8cdb-997f-35af-1544-3494.ngrok-free.app/view");
+        new HttpRequestTask().execute("https://ac94-2401-4900-6299-a16-79ee-b71b-9e80-c8e7.ngrok-free.app/cmo_view");
 
         b1 = findViewById(R.id.addempbut);
         b2 = findViewById(R.id.homebut);
         b3 = findViewById(R.id.viewreqbut);
+        b4 = findViewById(R.id.profilebut);
+        b5=findViewById(R.id.dashboardbut);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +70,56 @@ public class cmoviewreq extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(cmoviewreq.this, cmohome.class);
                 startActivity(i);
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(cmoviewreq.this, cmoprofile.class);
+                startActivity(i);
+            }
+        });
+        Spinner stationSpinner = findViewById(R.id.stationSpinner);
+
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.station_codes1, android.R.layout.simple_spinner_item);
+
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        stationSpinner.setAdapter(adapter);
+        stationSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Get the selected item from the spinner
+                selected_station = parent.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                not_selected_station="true";
+            }
+        });
+
+
+
+
+        Spinner statusSpinner = findViewById(R.id.statusSpinner);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
+                R.array.status_codes, android.R.layout.simple_spinner_item);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        statusSpinner.setAdapter(adapter1);
+
+        statusSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Get the selected item from the spinner
+                selected_status = parent.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                not_selected_status="true";
             }
         });
         faultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -92,7 +145,7 @@ public class cmoviewreq extends AppCompatActivity {
         String station = successObject.getString("station");
         String device = successObject.getString("device");
         String deviceno = successObject.getString("deviceno");
-        String status = successObject.getString("description");
+        String status = successObject.getString("status");
         intent.putExtra("ackno", ackno);
         intent.putExtra("date", date);
         intent.putExtra("station", station);
@@ -164,15 +217,27 @@ public class cmoviewreq extends AppCompatActivity {
 
                     // Iterate through the success array
                     for (int i = 0; i < successArray.length(); i++) {
-                        JSONObject successObject = successArray.getJSONObject(i);
+                        if(((not_selected_station=="true") && (not_selected_status=="true")) || (selected_station=="All Station" || selected_status=="All Status")) {
+                            successObject = successArray.getJSONObject(i);
+                        } else if ((successArray.getJSONObject(i).getString("station")== selected_station) && (not_selected_status=="true")) {
+                            successObject = successArray.getJSONObject(i);
+                        } else if ((successArray.getJSONObject(i).getString("status")== selected_status) && (not_selected_station=="true")) {
+                            successObject = successArray.getJSONObject(i);
+                        } else if ((successArray.getJSONObject(i).getString("station")== selected_station) &&(successArray.getJSONObject(i).getString("status")== selected_status)) {
+                            successObject = successArray.getJSONObject(i);
+                        }
+
 
                         // Get values from JSON
-                        String station = successObject.getString("station");
-                        String device = successObject.getString("device");
+                             String station = successObject.getString("station");
+                             String device = successObject.getString("device");
 
-                        // Add station and ackno to the list
-                        String fault = station + ": " + device;
-                        faultList.add(fault);
+                             String status = successObject.getString("status");
+
+                             // Add station and ackno to the list
+                             String fault = station + ": " + device + ": " + status;
+                             faultList.add(fault);
+
                     }
 
                     // Notify the adapter that the data set has changed
@@ -186,4 +251,6 @@ public class cmoviewreq extends AppCompatActivity {
             }
         }
     }
+
+
 }

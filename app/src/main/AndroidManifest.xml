@@ -97,6 +97,18 @@
             android:name=".zjeapprovereq"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".cmoprofile"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".zjeprofile"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".cmodashboard"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

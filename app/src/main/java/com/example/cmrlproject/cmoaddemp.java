@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class cmoaddemp extends AppCompatActivity {
     Button b1;
-    ImageButton i1,i2,i3;
+    ImageButton i1,i2,i3,i4;
     EditText e1,e2,e3,e4,e5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class cmoaddemp extends AppCompatActivity {
         i1=(ImageButton) findViewById(R.id.addempbut);
         i2=(ImageButton) findViewById(R.id.homebut);
         i3=(ImageButton) findViewById(R.id.viewreqbut);
+        i4=(ImageButton)  findViewById(R.id.profilebut);
         b1=(Button) findViewById(R.id.adddetailb);
 
 
@@ -39,6 +40,13 @@ public class cmoaddemp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(cmoaddemp.this, cmoviewreq.class);
+                startActivity(i);
+            }
+        });
+        i4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(cmoaddemp.this, cmoprofile.class);
                 startActivity(i);
             }
         });
