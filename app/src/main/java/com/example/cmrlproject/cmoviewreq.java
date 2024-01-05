@@ -79,6 +79,13 @@ public class cmoviewreq extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(cmoviewreq.this, cmodashboard.class);
+                startActivity(i);
+            }
+        });
         Spinner stationSpinner = findViewById(R.id.stationSpinner);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
